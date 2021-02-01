@@ -1,7 +1,5 @@
 import os
-import time
 
-import playsound
 from gtts import gTTS
 from twitchio.ext import commands
 from pydub import AudioSegment
@@ -15,16 +13,10 @@ def speak(text):
     tts = gTTS(text=text, lang=TTS_LANGUAGE)
     filename = TEMPORARY_FILE
     tts.save(filename)
-    playsound.playsound(filename)
-    os.remove(TEMPORARY_FILE)
-
-def speakPyDub(text):
-    tts = gTTS(text=text, lang=TTS_LANGUAGE)
-    filename = TEMPORARY_FILE
-    tts.save(filename)
     audio = AudioSegment.from_mp3(filename)
     play(audio)
     os.remove(TEMPORARY_FILE)
+
 
 class Bot(commands.Bot):
     def __init__(self):
@@ -44,7 +36,7 @@ class Bot(commands.Bot):
         print(message.author.name + ': ' + message.content)
         # if userlist is empty or user exists in ttsusers-list
         if len(TTS_USERS) == 0 or TTS_USERS.count(message.author.name) == 1:
-            speakPyDub(message.content)
+            speak(message.content)
             await self.handle_commands(message)
         else:
             pass
