@@ -21,3 +21,7 @@ pip install twitchio
 ```
 python twitch_tts.py
 ```
+
+
+## Notes
+Tested with python 3.9.1 64bit on Windows 10
