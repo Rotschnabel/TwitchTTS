@@ -12,8 +12,7 @@ pip install playsound
 pip install twitchio
 ```
 
-2.
-Visit http://twitchapps.com/tmi and get your oauth token
+2. Visit http://twitchapps.com/tmi and get your oauth token
 
 3. Change the "nickname" and "channel" variables to your twitch username.
    Change the "token" variable to match your generated oauth token.
