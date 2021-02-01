@@ -1,33 +1,29 @@
-from gtts import gTTS
 import os
 import time
+
 import playsound
+from gtts import gTTS
 from twitchio.ext import commands
 
-#https://www.learndatasci.com/tutorials/how-stream-text-data-twitch-sockets-python/
+from config import *
 
 
 def speak(text):
-    tts = gTTS(text=text, lang='de') # change de to e.g en for english
-    filename = 'tts.mp3'
+    tts = gTTS(text=text, lang=TTS_LANGUAGE)
+    filename = TEMPORARY_FILE
     tts.save(filename)
     playsound.playsound(filename)
-    os.remove('tts.mp3')
-
-server = 'irc.chat.twitch.tv'
-port = 6667
-nickname = 'username' #paste your twitch username here
-token = 'oauth:m14t7y8q1d20fcm653bdj2eoarl6zhg' # (example key) paste your oauth-key here, you get it from: #http://twitchapps.com/tmi
-channel = 'username' #paste your twitch username here
-
-ttsusers=[] # list of chat users allowed to generate tts (e.g ttsusers=['frankerz']) Please enter in lowercase. If empty (tts=[])  everyone can generate tts. 
-
-
+    os.remove(TEMPORARY_FILE)
 
 class Bot(commands.Bot):
     def __init__(self):
-        super().__init__(irc_token=token, client_id='...', nick=nickname, prefix='!',
-                         initial_channels=[channel])
+        super().__init__(
+            irc_token=TOKEN,
+            client_id='...',
+            nick=NICKNAME,
+            prefix='!',
+            initial_channels=[CHANNEL],
+        )
 
     # Events don't need decorators when subclassed
     async def event_ready(self):
@@ -35,12 +31,12 @@ class Bot(commands.Bot):
 
     async def event_message(self, message):
         print(message.author.name + ': ' + message.content)
-        if len(ttsusers)==0 or ttsusers.count(message.author.name)==1: # if userlist is empty or user exists in ttsusers-list
+        # if userlist is empty or user exists in ttsusers-list
+        if len(TTS_USERS) == 0 or TTS_USERS.count(message.author.name) == 1:
             speak(message.content)
             await self.handle_commands(message)
         else:
             pass
-
 
     # Commands use a decorator...
     @commands.command(name='test')
