@@ -32,14 +32,11 @@ Change the `config.py`-variables to your needs.
 Paste your generated oauth token into the "token" variable.
 
 4. Simply run the script with python
+
 ```
 python twitch_tts.py
 ```
 
-
-
-
->>>>>>> main
 ## Notes
 1. If you want only some users to be able to generate TTS, add them into the "TTS_USERS" list. e.g:
 
