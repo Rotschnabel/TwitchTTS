@@ -1,4 +1,4 @@
-gtts == "*"
-playsound == "*"
-twitchio == "*"
-pydub == "*"
+gtts
+playsound
+twitchio
+pydub
