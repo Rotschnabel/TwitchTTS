@@ -1,0 +1,16 @@
+SERVER = 'irc.chat.twitch.tv'
+PORT = 6667
+# (example key) paste your oauth-key here, you get it from:
+# http://twitchapps.com/tmi
+TOKEN = 'oauth:abcexamplekey123456xyzchangeme'
+# paste your twitch username here
+NICKNAME = 'mogoh'
+# Channel is by default the same as NICKNAME, but you can change it.
+CHANNEL = NICKNAME
+# List of chat users allowed to generate tts (e.g TTS_USERS = ['mogoh']). Please enter in lowercase.
+# If empty (tts=[])  everyone can generate tts.
+TTS_USERS = []
+# Temporary file from tts.
+TEMPORARY_FILE = 'temp_tts.mp3'
+# Change 'de' to e.g. 'en' for english
+TTS_LANGUAGE = 'de'
