@@ -5,15 +5,7 @@
 1. Install the dependencies (gTTS, playsound, twitchio) via pip in the command line.
 
 ```
-pip install gTTS && pip install pydub && pip install twitchio
-```
-
-or seperately:
-
-```
-pip install gTTS
-pip install pydub
-pip install twitchio
+pip install -r requirements.txt
 ```
 
 or with pipenv:
@@ -23,9 +15,9 @@ pipenv sync
 pipenv shell
 ```
 
-2. Visit http://twitchapps.com/tmi and get your oauth token
+1. Visit http://twitchapps.com/tmi and get your oauth token
 
-3. Configure
+2. Configure
 
 Copy `config.py.example` to `config.py`.
 Change the `config.py`-variables to your needs.
