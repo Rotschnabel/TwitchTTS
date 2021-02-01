@@ -20,6 +20,7 @@ nickname = 'username' #paste your twitch username here
 token = 'oauth:m14t7y8q1d20fcm653bdj2eoarl6zhg' # (example key) paste your oauth-key here, you get it from: #http://twitchapps.com/tmi
 channel = 'username' #paste your twitch username here
 
+ttsusers=[] # list of chat users allowed to generate tts (e.g ttsusers=['frankerz']) Please enter in lowercase. If empty (tts=[])  everyone can generate tts. 
 
 
 
@@ -33,9 +34,13 @@ class Bot(commands.Bot):
         print(f'Ready | {self.nick}')
 
     async def event_message(self, message):
-        print(message.author)
-        speak(message.content)
-        await self.handle_commands(message)
+        print(message.author.name + ': ' + message.content)
+        if len(ttsusers)==0 or ttsusers.count(message.author.name)==1: # if userlist is empty or user exists in ttsusers-list
+            speak(message.content)
+            await self.handle_commands(message)
+        else:
+            pass
+
 
     # Commands use a decorator...
     @commands.command(name='test')
