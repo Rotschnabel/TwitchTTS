@@ -15,7 +15,7 @@ pip install twitchio
 2. Visit http://twitchapps.com/tmi and get your oauth token
 
 3. Change the "nickname" and "channel" variables to your twitch username.
-   Change the "token" variable to match your generated oauth token.
+Paste your generated oauth token into the "token" variable.
    
 4. Simply run the script with python
 ```
