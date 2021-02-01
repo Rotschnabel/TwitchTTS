@@ -5,14 +5,14 @@
 1. Install the dependencies (gTTS, playsound, twitchio) via pip in the command line.
 
 ```
-pip install gTTS && pip install playsound && pip install twitchio
+pip install gTTS && pip install pydub && pip install twitchio
 ```
 
 or seperately:
 
 ```
 pip install gTTS
-pip install playsound
+pip install pydub
 pip install twitchio
 ```
 
