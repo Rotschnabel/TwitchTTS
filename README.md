@@ -25,5 +25,9 @@ python twitch_tts.py
 
 ## Notes
 1. If you want only some users to be able to generate TTS, add them into the "ttsusers" list.
-e.g: ttsusers=['frankerz','alphastar','twitchbot123']
+e.g: 
+```
+ttsusers=['frankerz','alphastar','twitchbot123']
+```
+
 Tested with python 3.9.1 64bit on Windows 10
