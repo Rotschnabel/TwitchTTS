@@ -45,5 +45,5 @@ TTS_USERS = [ 'frankerz', 'alphastar', 'twitchbot123' ]
 
 Tested with python 3.9.1 64bit on Windows 10
 
-Refference:
-https://www.learndatasci.com/tutorials/how-stream-text-data-twitch-sockets-python/
+Reference:
+https://twitchio.readthedocs.io/en/rewrite/twitchio.html
