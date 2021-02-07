@@ -4,13 +4,13 @@
 
 1. Install the dependencies (gTTS, playsound, twitchio) via pip in the command line.
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
 or with pipenv:
 
-```
+```bash
 pipenv sync
 pipenv shell
 ```
@@ -25,8 +25,17 @@ Paste your generated oauth token into the "token" variable.
 
 4. Simply run the script with python
 
-```
+```bash
 python twitch_tts.py
+```
+
+### Ubuntu
+
+TwitchTTS uses playsound witch requires gstreamer and its python bindungs.
+To install on Ubuntu use:
+
+```bash
+sudo apt install python3-gst-1.0
 ```
 
 ## Notes
