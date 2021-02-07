@@ -1,5 +1,3 @@
-SERVER = 'irc.chat.twitch.tv'
-PORT = 6667
 # (example key) paste your oauth-key here, you get it from:
 # http://twitchapps.com/tmi
 TOKEN = 'oauth:abcexamplekey123456xyzchangeme'
