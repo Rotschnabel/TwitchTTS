@@ -1,6 +1,6 @@
 # TwitchTTS
 
-## Installation
+## Installation with Python
 
 1. Install the dependencies (gTTS, playsound, twitchio) via pip in the command line.
 
@@ -38,6 +38,14 @@ To install on Ubuntu use:
 sudo apt install python3-gst-1.0
 ```
 
+### Windows
+
+1. Unzip the archive.
+2. Visit http://twitchapps.com/tmi and get your oauth token
+2. open config.py and paste your generated token into the "TOKEN" variable. Also change the "NICKNAME" variable to your twitch username.
+3. (Optional) Change TTS_USERS or TTS_LANGUAGE, see NOTES below
+4. Run twitch_tts.exe
+
 ## Notes
 1. If you want only some users to be able to generate TTS, add them into the "TTS_USERS" list. e.g:
 
@@ -47,5 +55,5 @@ TTS_USERS = [ 'frankerz', 'alphastar', 'twitchbot123' ]
 
 Tested with python 3.9.1 64bit on Windows 10
 
-Refference:
-https://www.learndatasci.com/tutorials/how-stream-text-data-twitch-sockets-python/
+Reference:
+https://twitchio.readthedocs.io/en/rewrite/twitchio.html
