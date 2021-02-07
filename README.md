@@ -42,9 +42,9 @@ sudo apt install python3-gst-1.0
 
 1. Unzip the archive.
 2. Visit http://twitchapps.com/tmi and get your oauth token
-2. open config.py and paste your generated token into the "TOKEN" variable. Also change the "NICKNAME" variable to your twitch username.
+2. Run "EDIT_CONFIGURATION.bat". That should open the config.py file in the bin folder. Paste your generated token into the "TOKEN" variable. Also change the "NICKNAME" variable to your twitch username.
 3. (Optional) Change TTS_USERS or TTS_LANGUAGE, see NOTES below
-4. Run twitch_tts.exe
+4. Run "RUN_TTSBOT.bat" or alternatively the twitch_tts.exe in the bin folder.
 
 ## Notes
 1. If you want only some users to be able to generate TTS, add them into the "TTS_USERS" list. e.g:
