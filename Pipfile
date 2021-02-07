@@ -8,7 +8,7 @@ verify_ssl = true
 [packages]
 gtts = "*"
 twitchio = "*"
-pydub = "*"
+playsound = "*"
 
 [requires]
 python_version = "3"

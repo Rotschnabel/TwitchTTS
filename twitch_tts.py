@@ -2,8 +2,7 @@ import os
 
 from gtts import gTTS
 from twitchio.ext import commands
-from pydub import AudioSegment
-from pydub.playback import play
+import playsound
 
 
 from config import *
@@ -13,8 +12,7 @@ def speak(text):
     tts = gTTS(text=text, lang=TTS_LANGUAGE)
     filename = TEMPORARY_FILE
     tts.save(filename)
-    audio = AudioSegment.from_mp3(filename)
-    play(audio)
+    playsound.playsound(filename)
     os.remove(TEMPORARY_FILE)
 
 
